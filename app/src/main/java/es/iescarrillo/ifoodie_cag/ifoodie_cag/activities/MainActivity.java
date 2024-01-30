@@ -1,8 +1,10 @@
-package es.iescarrillo.ifoodie_cag;
+package es.iescarrillo.ifoodie_cag.ifoodie_cag.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import es.iescarrillo.ifoodie_cag.R;
 
 public class MainActivity extends AppCompatActivity {
 
