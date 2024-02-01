@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ifoodie_cag.activities.RegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/backbtn" />
+
+            <ImageView
+                android:id="@+id/imageView467567"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="270dp"
+                android:layout_toRightOf="@id/imageView4"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/orangecircle" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="45sp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="25dp"
+
+            android:text="Registration" />
+
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_gray"
+            android:textSize="15sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Enter your phone number to verify your account"/>
+
+
+
+
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:ems="10"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+
+            android:inputType="text"
+            android:background="@drawable/round_button"
+            android:drawableLeft="@drawable/usa"
+
+            android:text="" />
+
+
+
+
+        <Button
+            android:id="@+id/button2"
+
+            android:layout_marginTop="50dp"
+            android:width="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="SEND" />
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
