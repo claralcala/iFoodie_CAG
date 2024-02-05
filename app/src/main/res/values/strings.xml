@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">iFoodie_CAG</string>
+    <string name="open_menu">Opening menu</string>
+    <string name="close_menu">Closing menu</string>
 </resources>
