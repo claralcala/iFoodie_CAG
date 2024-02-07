@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ifoodie_cag.fragments.MyOrdersFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:checkedButton="@id/rbUpcoming"
+            android:background="@drawable/rounded_border"
+            android:elevation="10dp"
+            >
+
+
+            <RadioButton
+                android:id="@+id/rbUpcoming"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_button_orange"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@color/white"
+
+                android:text="Upcoming" />
+
+            <RadioButton
+                android:id="@+id/rbHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:background="@drawable/rounded_button_white"
+                android:button="@null"
+                android:textColor="@color/orange"
+                android:text="History" />
+
+        </RadioGroup>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="20dp"
+            android:elevation="10dp">
+
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rowCount="3"
+                app:columnCount="4">
+
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/starbucks"
+                    android:layout_margin="10dp"
+                    app:layout_columnWeight="1"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="1"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    app:layout_row="0"
+                    app:layout_columnSpan="2">
+
+
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="3 Items"
+
+                        android:textColor="@color/orange"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="Starbucks"
+                        android:textColor="@color/orange"
+                        app:layout_column="2"
+                        android:drawableRight="@drawable/vfd"
+                        android:drawablePadding="5dp"
+                        app:layout_row="0" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="#264100"
+                    app:layout_columnWeight="1"
+                    android:textColor="@color/orange"
+                    app:layout_column="3"
+                    app:layout_row="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="1"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    app:layout_row="0"
+                    app:layout_columnSpan="2">
+
+
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="3 Items"
+
+                        android:textColor="@color/orange"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="Starbucks"
+                        android:textColor="@color/orange"
+                        app:layout_column="2"
+                        android:drawableRight="@drawable/vfd"
+                        android:drawablePadding="5dp"
+                        app:layout_row="0" />
+
+                </LinearLayout>
+
+
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</FrameLayout>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.IFoodie_CAG"
         tools:targetApi="31">
         <activity
+            android:name=".ifoodie_cag.activities.WelcomeActivity"
+            android:exported="true" />
+        <activity
             android:name=".ifoodie_cag.activities.ReviewDetailsActivity"
             android:exported="false" />
         <activity

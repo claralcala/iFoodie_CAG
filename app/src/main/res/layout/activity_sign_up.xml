@@ -178,7 +178,7 @@
                 android:layout_weight="1"
                 android:text="FACEBOOK"
                 android:layout_marginLeft="20dp"
-                android:backgroundTint="@drawable/button_shadow"
+                android:backgroundTint="@color/black"
                 android:drawableLeft="@drawable/fblogodef"
                 android:layout_marginRight="10dp"/>
 
@@ -188,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="GOOGLE"
-                android:backgroundTint="@drawable/button_shadow"
+                android:backgroundTint="@color/black"
                 android:layout_marginLeft="10dp"
                 android:drawableLeft="@drawable/googlelogo"
                 android:layout_marginRight="20dp"/>
