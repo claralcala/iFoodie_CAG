@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ifoodie_cag.fragments.Cart_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Cart"
+                android:textAlignment="center" />
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="20dp"
+            android:elevation="10dp">
+
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rowCount="3"
+                app:columnCount="4">
+
+
+                <ImageView
+                    android:id="@+id/imageView75675"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/redhotpizza_mini"
+                    android:layout_margin="5dp"
+                    app:layout_column="0"
+                    app:layout_rowSpan="2"
+                    app:layout_row="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="1"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    app:layout_row="0"
+                    app:layout_columnSpan="2">
+
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="X"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="15sp"
+                    app:layout_columnWeight="1"
+                    android:textColor="@color/orange"
+                    app:layout_column="3"
+                    app:layout_row="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="1"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20dp"
+                    app:layout_row="0"
+                    app:layout_columnSpan="2">
+
+
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="Red N Hot Pizza"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="Spicy chicken, beef"
+                        android:textColor="@color/light_gray"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        app:layout_column="2"
+                        android:drawablePadding="5dp"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="$15.30"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        app:layout_column="1"
+                        android:paddingLeft="5dp"
+                        app:layout_row="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_column="2"
+                    app:layout_columnSpan="2"
+                    app:layout_columnWeight="2"
+                    android:layout_marginTop="30dp"
+                    app:layout_row="1">
+
+                    <ImageView
+                        android:id="@+id/ivMinus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+
+
+                        android:paddingBottom="25dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/remove_circle" />
+
+
+                    <TextView
+                        android:id="@+id/tvNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="02"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivMore"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+
+
+                        android:paddingBottom="25dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/add" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</FrameLayout>

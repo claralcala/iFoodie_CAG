@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.util.Log;
 
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import es.iescarrillo.ifoodie_cag.R;
+import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.FavouritesFragment;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.MyOrdersFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView menu;
 
     private Fragment fragment;
+
+    private BottomNavigationView bottom_menu;
 
 
 
@@ -63,12 +67,26 @@ public class MainActivity extends AppCompatActivity {
             return true;
 
         });
+
+
+        bottom_menu.setOnNavigationItemSelectedListener(item -> {
+            if(item.getItemId() == R.id.favourites){
+                fragment = new FavouritesFragment();
+
+            }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, fragment).commit();
+            drawerLayout.closeDrawers();
+            return true;
+        });
     }
 
     private void loadComponents(){
         drawerLayout = findViewById(R.id.drawer_layout);
         toolbar=findViewById(R.id.toolbar);
         menu= findViewById(R.id.nvMenu);
+
+        bottom_menu =findViewById(R.id.bottom_navigation);
 
     }
 }
