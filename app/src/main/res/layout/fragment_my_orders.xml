@@ -27,13 +27,7 @@
             android:orientation="horizontal">
 
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
 
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/backbtn" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -45,13 +39,7 @@
                 android:text="My Orders"
                 android:textAlignment="center" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="57dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="3dp"
-                app:srcCompat="@drawable/avatarpic" />
+
 
         </LinearLayout>
 
@@ -197,7 +185,7 @@
                         android:layout_height="match_parent"
                         android:layout_width="wrap_content"
                         android:text="Estimated Arrival"
-
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/light_gray"
                         app:layout_column="1"
                         app:layout_row="0" />
@@ -206,6 +194,7 @@
                         android:layout_height="match_parent"
                         android:layout_width="wrap_content"
                         android:text="25 min"
+                        android:layout_marginLeft="5dp"
                         android:textColor="@color/black"
                         android:textSize="40dp"
                         android:textStyle="bold"
@@ -267,6 +256,7 @@
                     <Button
                         android:id="@+id/btnCancelOrder"
                         android:layout_width="158dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:backgroundTint="@color/white"
@@ -288,7 +278,8 @@
 
                     <Button
                         android:id="@+id/btntrackorder"
-                        android:layout_width="157dp"
+                        android:layout_width="158dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_height="wrap_content"
                         android:elevation="30dp"
                         android:text="Track Order" />
@@ -429,6 +420,7 @@
                     <Button
                         android:id="@+id/btnRate"
                         android:layout_width="158dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:backgroundTint="@color/white"
@@ -454,7 +446,8 @@
 
                     <Button
                         android:id="@+id/reorder"
-                        android:layout_width="157dp"
+                        android:layout_width="158dp"
+                        android:layout_marginLeft="20dp"
                         android:layout_height="wrap_content"
                         android:elevation="30dp"
                         android:text="Re-Order" />
