@@ -14,6 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 import es.iescarrillo.ifoodie_cag.R;
+import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.Cart_Fragment;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.FavouritesFragment;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.HomeFragment;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.MyOrdersFragment;
@@ -84,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
             }else if (item.getItemId() == R.id.item_1){
                 fragment = new HomeFragment();
+            }else if (item.getItemId() == R.id.shopping_cart){
+                fragment = new Cart_Fragment();
             }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, fragment).commit();

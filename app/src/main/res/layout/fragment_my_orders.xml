@@ -464,7 +464,162 @@
         </androidx.cardview.widget.CardView>
 
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="20dp"
+            android:elevation="10dp">
 
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rowCount="3"
+                app:columnCount="4">
+
+
+                <ImageView
+                    android:id="@+id/imageView6775675"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/subway"
+                    android:layout_margin="10dp"
+                    app:layout_columnWeight="1"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="1"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    app:layout_row="0"
+                    app:layout_columnSpan="2">
+
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="$20.50"
+                    android:layout_marginLeft="50dp"
+                    app:layout_columnWeight="1"
+                    android:textColor="@color/orange"
+                    app:layout_column="3"
+                    app:layout_row="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="1"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20dp"
+                    app:layout_row="0"
+                    app:layout_columnSpan="2">
+
+
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="19 Jun, 11:50 - 2 items"
+
+                        android:textColor="@color/light_gray"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="Subway"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        app:layout_column="2"
+                        android:drawableRight="@drawable/vfd"
+                        android:drawablePadding="5dp"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:text="Order Delivered"
+                        android:textStyle="bold"
+                        android:textColor="#4CEA29"
+                        app:layout_column="1"
+                        android:drawableLeft="@drawable/greencircle"
+                        android:paddingLeft="5dp"
+                        app:layout_row="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="0"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    app:layout_row="1"
+                    app:layout_columnSpan="2">
+
+
+
+
+                    <Button
+                        android:id="@+id/btnRatebtn"
+                        android:layout_width="158dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/white"
+                        android:elevation="20dp"
+                        android:text="Rate" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_column="2"
+                    app:layout_columnWeight="2"
+                    app:layout_gravity="center_vertical"
+                    app:layout_row="1"
+                    app:layout_columnSpan="2">
+
+
+
+
+
+
+                    <Button
+                        android:id="@+id/reorderbtn"
+                        android:layout_width="158dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:elevation="30dp"
+                        android:text="Re-Order" />
+
+                </LinearLayout>
+
+
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
