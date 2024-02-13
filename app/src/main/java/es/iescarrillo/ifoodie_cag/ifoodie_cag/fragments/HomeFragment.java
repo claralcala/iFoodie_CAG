@@ -3,18 +3,21 @@ package es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import es.iescarrillo.ifoodie_cag.R;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import es.iescarrillo.ifoodie_cag.R;
+import es.iescarrillo.ifoodie_cag.ifoodie_cag.adapters.CategoryAdapter;
+import es.iescarrillo.ifoodie_cag.ifoodie_cag.models.Category;
+
+
 public class HomeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -23,27 +26,17 @@ public class HomeFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
 
+private RecyclerView recyclerView;
+private CategoryAdapter categoryAdapter;
+
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
 
-        fragment.setArguments(args);
-        return fragment;
-    }
+    // TODO: Rename and change types and number of parameters
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,7 +49,35 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //Obtengo el recyclerview de la vista
+        recyclerView = view.findViewById(R.id.rv_categories);
+
+        List<Category> categories = new ArrayList<>();
+        categories.add(new Category("Burger", R.drawable.img_burguer));
+        categories.add(new Category("Donut", R.drawable.img_donut));
+        categories.add(new Category("Pizza", R.drawable.img_pizza_r));
+        categories.add(new Category("Hot Dog", R.drawable.img_mexican));
+        categories.add(new Category("Sandwich", R.drawable.img_asian));
+        categories.add(new Category("I.Cream", R.drawable.img_icecream));
+
+
+
+        //Inicializar el adapter
+        categoryAdapter = new CategoryAdapter(getContext(), categories);
+        recyclerView.setAdapter(categoryAdapter);
+
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+
+
+        //Metodo en el que le vamos a pasar una variable de tipo LayoutManager que es el que me va a dejar
+        //indicar que tiene que mostrarse en horizontal
+        recyclerView.setLayoutManager(layoutManager);
+
+
+        return view;
     }
 }

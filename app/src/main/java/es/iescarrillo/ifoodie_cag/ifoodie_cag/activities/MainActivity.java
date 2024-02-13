@@ -15,6 +15,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import es.iescarrillo.ifoodie_cag.R;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.FavouritesFragment;
+import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.HomeFragment;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments.MyOrdersFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private Fragment fragment;
 
     private BottomNavigationView bottom_menu;
+
+    int selectedColor;
 
 
 
@@ -49,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
 
         actionBarDrawerToggle.syncState();
 
+        fragment=new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, fragment).commit();
+
+
         menu.setNavigationItemSelectedListener(item -> {
             if(item.getItemId() == R.id.my_orders){
 
@@ -69,10 +76,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        selectedColor = R.color.orange;
         bottom_menu.setOnNavigationItemSelectedListener(item -> {
             if(item.getItemId() == R.id.favourites){
                 fragment = new FavouritesFragment();
+                item.getIcon().setTint(selectedColor);
 
+            }else if (item.getItemId() == R.id.item_1){
+                fragment = new HomeFragment();
             }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment, fragment).commit();
