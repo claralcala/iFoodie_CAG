@@ -6,8 +6,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -32,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottom_menu;
 
     int selectedColor;
+
+    private Button btnLogout;
+
+    private LinearLayout llMacdo;
 
 
 
@@ -77,6 +84,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        btnLogout=findViewById(R.id.btnLogout);
+
+        btnLogout.setOnClickListener(v -> {
+            Intent back = new Intent(this, WelcomeActivity.class);
+            startActivity(back);
+        });
+
+
         selectedColor = R.color.orange;
         bottom_menu.setOnNavigationItemSelectedListener(item -> {
             if(item.getItemId() == R.id.favourites){
@@ -93,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.closeDrawers();
             return true;
         });
+
+
+
     }
 
     private void loadComponents(){
@@ -101,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         menu= findViewById(R.id.nvMenu);
 
         bottom_menu =findViewById(R.id.bottom_navigation);
+
 
     }
 }

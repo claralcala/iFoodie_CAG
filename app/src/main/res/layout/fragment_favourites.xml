@@ -51,7 +51,7 @@
 
 
             <RadioButton
-                android:id="@+id/rbUpcoming"
+                android:id="@+id/rbFood"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_button_orange"
@@ -64,7 +64,7 @@
                 android:text="Food Items" />
 
             <RadioButton
-                android:id="@+id/rbHistory"
+                android:id="@+id/rbRestaurants"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

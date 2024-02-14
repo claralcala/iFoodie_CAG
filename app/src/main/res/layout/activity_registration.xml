@@ -20,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imBack"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
@@ -34,7 +34,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginLeft="270dp"
-                android:layout_toRightOf="@id/imageView4"
+                android:layout_toRightOf="@id/imBack"
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/orangecircle" />
 
@@ -88,7 +88,7 @@
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnSend"
 
             android:layout_marginTop="50dp"
             android:width="200dp"

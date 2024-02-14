@@ -1,5 +1,6 @@
 package es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,11 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import es.iescarrillo.ifoodie_cag.R;
+import es.iescarrillo.ifoodie_cag.ifoodie_cag.activities.FoodDetailsActivity;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.adapters.CategoryAdapter;
 import es.iescarrillo.ifoodie_cag.ifoodie_cag.models.Category;
 
@@ -28,6 +31,8 @@ public class HomeFragment extends Fragment {
 
 private RecyclerView recyclerView;
 private CategoryAdapter categoryAdapter;
+
+private LinearLayout llMacdo;
 
 
     public HomeFragment() {
@@ -76,6 +81,15 @@ private CategoryAdapter categoryAdapter;
         //Metodo en el que le vamos a pasar una variable de tipo LayoutManager que es el que me va a dejar
         //indicar que tiene que mostrarse en horizontal
         recyclerView.setLayoutManager(layoutManager);
+
+
+        llMacdo =(LinearLayout) view.findViewById(R.id.llChickenPizza);
+
+        llMacdo.setOnClickListener(v -> {
+            Intent details = new Intent(getActivity(), FoodDetailsActivity.class);
+            // Iniciar la Activity
+            startActivity(details);
+        });
 
 
         return view;

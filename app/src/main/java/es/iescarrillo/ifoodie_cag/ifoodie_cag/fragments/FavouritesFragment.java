@@ -2,11 +2,13 @@ package es.iescarrillo.ifoodie_cag.ifoodie_cag.fragments;
 
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 
 import es.iescarrillo.ifoodie_cag.R;
 
@@ -15,11 +17,13 @@ import es.iescarrillo.ifoodie_cag.R;
  * Use the {@link FavouritesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class FavouritesFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
+    private View view;
 
     public FavouritesFragment() {
         // Required empty public constructor
@@ -54,6 +58,31 @@ public class FavouritesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favourites, container, false);
+
+        view= inflater.inflate(R.layout.fragment_favourites, container, false);
+        RadioButton btnFood, btnRestaurants;
+
+        int orangeColor=R.color.orange;
+        btnFood= (RadioButton) view.findViewById(R.id.rbFood);
+        btnRestaurants =(RadioButton)view.findViewById(R.id.rbRestaurants);
+
+        btnRestaurants.setOnClickListener(v -> {
+            btnFood.setBackgroundResource(R.drawable.rounded_button_white);
+            btnFood.setTextColor(ContextCompat.getColor(getContext(), R.color.orange));
+            btnRestaurants.setBackgroundResource(R.drawable.rounded_button_orange);
+            btnRestaurants.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+
+        });
+
+
+        btnFood.setOnClickListener(v -> {
+            btnFood.setBackgroundResource(R.drawable.rounded_button_orange);
+            btnFood.setTextColor(ContextCompat.getColor(getContext(), R.color.white));
+            btnRestaurants.setBackgroundResource(R.drawable.rounded_button_white);
+            btnRestaurants.setTextColor(ContextCompat.getColor(getContext(), R.color.orange));
+        });
+
+
+        return view;
     }
 }
